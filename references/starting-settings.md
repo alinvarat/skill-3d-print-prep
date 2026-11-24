@@ -8,3 +8,9 @@ Use only after confirming the actual material, nozzle and printer profile. These
 - Mesh tessellation: 0.01 mm linear and 10° angular deflection are starting values; choose relative to the smallest feature.
 - Overhangs about 45–50° are a starting check. Use teardrop holes or bridges where support would spoil a surface; prefer a large flat bed-contact face where loads permit.
 - Structural parts: start with 4–5 perimeters and 30–40% gyroid/cubic infill. Cosmetic parts: 2–3 perimeters and 15–20%. Layer height 0.2 mm; 0.12–0.16 mm for fine detail. Verify against the material/profile and intended load.
+
+## Printer-specific starting points (Anycubic Kobra X, direct drive; provisional, verify with a coupon)
+- Retraction must stay <=1.5 mm (heat-creep clog); PETG 0.8–1.2 mm @ 35–45, PLA 0.6–0.8, TPU 0.4–0.6 or off. PETG 235–245 °C/bed 75–80, PLA 205–220/55–60, TPU 215–230/40–50 (TPU bypasses the ACE tubes).
+- PETG: not on smooth PEI; wait until plate <35 °C before removal; dry 60–65 °C 6 h if it strings/pops.
+- FDM CAD offsets at 0.2 mm layers (assumptions, not universal): bearing pocket +0.10 radial; rotating bore +0.30 dia; M3 clearance Ø3.3–3.4; M3 heat-set pilot Ø4.0–4.1, depth >=4.5.
+- Slicer: wall order inner/outer/inner, calibrate pressure advance per filament batch, scarf/rear seam for journals. Colour change retraction 1.0 mm (never 0), extra restart +0.10–0.15 mm, prime tower on.
